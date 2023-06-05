@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">  
+    <title>小鹿Zoa生日快樂</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="awake.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id ="game-canvas" class="wrapper" style="display: none;">
+      <ul class="cards">
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa1.jpg" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa2.jpg" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa3.jpg" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa4.jpg" alt="card-img">
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa5.jpg" alt="card-img"> <!--1-->
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa6.jpg" alt="card-img"> <!--2-->
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa7.jpg" alt="card-img"> <!--3-->
+          </div>
+        </li>
+        <li class="card">
+          <div class="view front-view">
+            <img src="Zoa/back_icon.png" alt="icon">
+          </div>
+          <div class="view back-view">
+            <img src="Zoa/Zoa8.jpg" alt="card-img"> <!--4-->
+          </div>
+        </li>
+        <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa1.jpg" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa2.jpg" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa3.jpg" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa4.jpg" alt="card-img">
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa5.jpg" alt="card-img"> <!--1-->
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa6.jpg" alt="card-img"> <!--2-->
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa7.jpg" alt="card-img"> <!--3-->
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="Zoa/back_icon.png" alt="icon">
+            </div>
+            <div class="view back-view">
+              <img src="Zoa/Zoa8.jpg" alt="card-img"> <!--4-->
+            </div>
+          </li>
+          <div class="details">
+            <p class="time">剩餘時間: <span><b>30</b>s</span></p>
+            <p class="flips">翻牌次數: <span><b>0</b></span></p>
+            <p class="score">得分: <span><b>0</b></span></p>
+            <button>重新開始</button>
+          </div>
+      </ul>
+    </div>
+
+    <div class="punish-view" id="punish-view" style="display: none;">
+      <video id="punish-video" src="Zoa/zoa break it.mp4" alt="答錯太多次的處罰" muted></video>
+    </div>
+    <div class = "punish-text" id="punish-text" style="display: none;">
+      <p style="font-size: 40px; color: antiquewhite;">連續錯太多次啦！</p>
+    </div>
+    <div class="pre-game">
+      <button id="start-btn" onclick='ShowDiv()' style="width: 800px; height: 200px"><b style="font-size: 50px;">Start<br>請使用全螢幕遊玩</b></button>
+    </div>
+    <div class ="result-panel" id = "result-panel" style="display: none; background-color: antiquewhite;">
+      <div class="game-over" id = "game-over" style = "display: none; "><b style = "font-size: 80px; color: aquamarine;"> GAME OVER </b></div>
+      <div class="score-display" id = "score-display" style= "display: none" ><b style = "font-size: 80px; color:blueviolet" >最終成績是: </b><span id = "your-score" ></span></div>
+    </div>
+    <script src="script.js"></script>
+    <!--Use a specific version-->
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@x.x.x/disable-devtool.min.js'></script>
+    <!--Use latest version-->
+    <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>    
+    <audio id = "music" src="music/4.mp3" style="display: none;" loop></audio>
+
+  </body>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  </script>
+
+  <div id="preloader">
+    <div id="status"><img src="loading.gif" style="width: 500px ;"/></div>
+  </div>
+
+  <script>
+    $(function() {
+      $("#status").delay(5000).fadeOut(3000); //delay --> 延遲幾秒才fadeOut
+      $("#preloader").delay(7000).fadeOut(3000);
+  });
+  </script>
+</html>
+
